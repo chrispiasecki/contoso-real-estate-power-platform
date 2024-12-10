@@ -1,0 +1,12 @@
+<pluginpackage uniquename="contoso_PaymentVirtualTableProvider">
+  <exportkeyversion>1</exportkeyversion>
+  <iscustomizable>1</iscustomizable>
+  <managedidentityid>
+    <managedidentityid>fcdb7ca6-8d5e-ef11-bfe2-002248083aae</managedidentityid>
+  </managedidentityid>
+  <name>contoso_PaymentVirtualTableProvider</name>
+  <package mimetype="application/octet-stream">contoso_PaymentVirtualTableProvider.nupkg</package>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <version>1.0.0</version>
+</pluginpackage>

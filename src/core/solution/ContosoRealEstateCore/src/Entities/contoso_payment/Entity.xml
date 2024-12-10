@@ -501,7 +501,7 @@
       <IsKnowledgeManagementEnabled>0</IsKnowledgeManagementEnabled>
       <IsSLAEnabled>0</IsSLAEnabled>
       <IsDocumentRecommendationsEnabled>0</IsDocumentRecommendationsEnabled>
-      <DataProviderId>{24b7ef90-a008-ef11-9f8a-0022480c5a42}</DataProviderId>
+      <DataProviderId>{7a115e9b-59a7-ef11-8a69-7c1e525c44fb}</DataProviderId>
       <DataSourceId>{b2f016fb-a008-ef11-9f8a-0022480c5a42}</DataSourceId>
       <IsBPFEntity>0</IsBPFEntity>
       <OwnershipTypeMask>OrgOwned</OwnershipTypeMask>

@@ -51,17 +51,18 @@
     </Content>
   </ItemGroup>
 
-  <!-- Add this if using NuGet packaged plugin 
+  <!-- Add this if using NuGet packaged plugin -->
   <Target Name="BuildPaymentVirtualTableProvider" BeforeTargets="BeforeBuild">
     <MSBuild Projects="..\..\plugins\payments-virtual-table-provider\PaymentVirtualTableProvider\PaymentVirtualTableProvider.csproj" Targets="Restore" />
     <MSBuild Projects="..\..\plugins\payments-virtual-table-provider\PaymentVirtualTableProvider\PaymentVirtualTableProvider.csproj" Targets="Build" />
     <MSBuild Projects="..\..\plugins\payments-virtual-table-provider\PaymentVirtualTableProvider\PaymentVirtualTableProvider.csproj" Targets="Publish" />
     <MSBuild Projects="..\..\plugins\payments-virtual-table-provider\PaymentVirtualTableProvider\PaymentVirtualTableProvider.csproj" Targets="Pack" />
-  </Target> -->
+  </Target> 
+
 
   <ItemGroup>
-    <!-- If this plugin is built as a NuGet package, then you must remove the ProjectReference -->
-    <ProjectReference Include="..\..\plugins\payments-virtual-table-provider\PaymentVirtualTableProvider\PaymentVirtualTableProvider.csproj" /> 
+    <!-- If this plugin is built as a NuGet package, then you must remove the ProjectReference
+    <ProjectReference Include="..\..\plugins\payments-virtual-table-provider\PaymentVirtualTableProvider\PaymentVirtualTableProvider.csproj" />  -->
     <ProjectReference Include="..\..\mda-client-hooks\ClientHooks.csproj" />
     <ProjectReference Include="..\..\plugins\business-logic\ContosoRealEstateBusinessLogic\ContosoRealEstate.BusinessLogic.csproj" />
   </ItemGroup>

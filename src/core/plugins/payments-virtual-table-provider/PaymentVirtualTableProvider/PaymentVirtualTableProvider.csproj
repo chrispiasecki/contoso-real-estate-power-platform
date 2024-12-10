@@ -21,8 +21,15 @@
   </PropertyGroup>
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Plugin.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Plugin.props')" />
 
+  <!-- If using a regular plugin assembly, sign the assembly using SignTool post-build 
   <Target Name="RunPowerShellScript" AfterTargets="Build">
     <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)/../ManagedIdentity/sign-plugin.ps1&quot;" />
+  </Target>
+  -->
+
+   <!-- If using a plugin package, sign the package using Nuget Sign post-pack -->
+  <Target Name="RunPowerShellScript" AfterTargets="Pack">
+    <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)/../ManagedIdentity/sign-plugin-package.ps1&quot;" />
   </Target>
 
   <!--

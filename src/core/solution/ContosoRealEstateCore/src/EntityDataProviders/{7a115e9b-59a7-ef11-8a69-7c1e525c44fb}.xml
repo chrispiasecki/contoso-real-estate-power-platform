@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDataProvider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityDataProviderId>{7a115e9b-59a7-ef11-8a69-7c1e525c44fb}</EntityDataProviderId>
+  <Name>PaymentsProvider</Name>
+  <DataSourceLogicalName>contoso_paymentsdatasource</DataSourceLogicalName>
+  <IsCustomizable>1</IsCustomizable>
+  <RetrievePluginTypeExportKey>B661A5D1D4C891AB10CF5248C0DF36A3BCDE0F0CC1387F690C9479F1597B8F4E</RetrievePluginTypeExportKey>
+  <RetrieveMultiplePluginTypeExportKey>263B73314EE9E72BEC1B931CCA4F6E1B067C7E448B2FE1C6DFA73ECE346B2EB8</RetrieveMultiplePluginTypeExportKey>
+  <CreatePluginTypeExportKey>383315163C83D12786BC6D9A4D61BADE68BB3D9E1B853980DEAEB500E0D43F77</CreatePluginTypeExportKey>
+  <UpdatePluginTypeExportKey>ECD44181C04E65A48A8B71B2D0E882D6EB7D13E50A112E611647F69E7814C5EA</UpdatePluginTypeExportKey>
+  <DeletePluginTypeExportKey>34A3F119943DEA213765647AB8D8C719F814B9F6824F9AE4786DB3C710455062</DeletePluginTypeExportKey>
+  <LookupExpansionEnabled>0</LookupExpansionEnabled>
+</EntityDataProvider>

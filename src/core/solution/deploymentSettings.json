@@ -1,6 +1,19 @@
 {
   "EnvironmentVariables": [
     {
+      "SchemaName": "contoso_FCB_UsePowerFxPlugins",
+      "Value": "",
+      "DefaultValue": "no",
+      "Name": {
+        "Default": "UsePowerFxPlugins",
+        "ByLcid": {
+          "1033": "UsePowerFxPlugins"
+        }
+      },
+      "TypeId": 100000002,
+      "IsRequired": false
+    },
+    {
       "SchemaName": "contoso_PaymentsApiAppId",
       "Value": "",
       "Name": {
