@@ -162,16 +162,23 @@ switch -wildcard ($solutionFilePath) {
         }
 
         # The following works around MANAGED_IDENTITY_IMPORT_BUG
-        # If overridePluginManagedIdentityId is not empty, find the element ImportExportXml.SolutionPluginAssemblies.PluginAssembly.ManagedIdentityId and update it
+        # If overridePluginManagedIdentityId is not empty, for all pluginpackage.xml files, find the element pluginpackage.managedidentityid.managedidentityid and update it
         if ($overridePluginManagedIdentityId) {
-            $pluginAssemblyElements = $customizationsXml.ImportExportXml.SolutionPluginAssemblies.PluginAssembly
-            foreach ($pluginAssemblyElement in $pluginAssemblyElements) {
-                # Only update if there is a manged identity id $pluginAssemblyElement.ManagedIdentityId already
-                if (-not $pluginAssemblyElement.ManagedIdentityId) {
+            $pluginPackageXmlFiles = Get-ChildItem -Path $tempFolder -Recurse -Filter "pluginpackage.xml"
+            foreach ($pluginPackageXmlFile in $pluginPackageXmlFiles) {
+                $pluginPackageXml = [xml](Get-Content -Path $pluginPackageXmlFile.FullName)
+                
+                 # Only update if there is a manged identity id $pluginPackageXml.pluginpackage.managedidentityid already
+                 if (-not $pluginPackageXml.pluginpackage.managedidentityid) {
                     continue
                 }
-                Write-Host "Updating plugin assembly '$($pluginAssemblyElement.FullName)' element with managedidentityid = $overridePluginManagedIdentityId" -ForegroundColor Green
-                $pluginAssemblyElement.ManagedIdentityId = $overridePluginManagedIdentityId
+                $managedIdentityElement = $pluginPackageXml.pluginpackage.managedidentityid              
+                   
+                Write-Host "Updating plugin package '$($pluginPackageXml.pluginpackage.uniquename)' element with managedidentityid = $overridePluginManagedIdentityId" -ForegroundColor Green
+                $managedIdentityElement.managedidentityid = $overridePluginManagedIdentityId
+                
+                # Save the updated pluginpackage.xml
+                $pluginPackageXml.Save($pluginPackageXmlFile.FullName)
             }
         }
 
